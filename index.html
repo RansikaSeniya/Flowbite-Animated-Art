@@ -73,6 +73,120 @@
         </div>
     </div>
 
+    <style>
+        /* Floating Circles Animation */
+        .floating-circle {
+            position: absolute;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .circle-1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .circle-3 {
+            width: 80px;
+            height: 80px;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .circle-4 {
+            width: 120px;
+            height: 120px;
+            bottom: 20%;
+            right: 25%;
+            animation-delay: 6s;
+        }
+
+        .circle-5 {
+            width: 90px;
+            height: 90px;
+            top: 50%;
+            left: 5%;
+            animation-delay: 8s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+            50% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+            75% {
+                transform: translate(20px, 30px) scale(1.05);
+            }
+        }
+
+        /* Rotating Shapes */
+        .rotating-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+            border-radius: 20%;
+        }
+
+        .shape-1 {
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: rotate 20s linear infinite;
+        }
+
+        .shape-2 {
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: rotate 15s linear infinite reverse;
+        }
+
+        .shape-3 {
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Pulsing Circle */
+        .pulsing-circle {
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+    
+    </style>
 </body>
 </html>
 
